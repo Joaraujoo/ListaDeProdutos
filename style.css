@@ -1,0 +1,28 @@
+body{
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.container{
+    height: 100vh;
+}
+
+.formulario{
+    width: 40%;
+    height: 50%;
+}
+
+input{
+    margin-bottom: 15px;
+}
+
+.btn{
+    width: 100%;
+    margin-top: 10px;
+}
+
+#listagem{
+    width: 500px;
+    display: none;
+}
+
