@@ -57,7 +57,7 @@ function Cadastrar(){
             let linha = listaProdutos.insertRow();
             linha.insertCell(0).innerHTML = produto.nome;
             linha.insertCell(1).innerHTML = produto.descricao;
-            linha.insertCell(2).innerHTML = `R$ ${produto.valor}`;
+            linha.insertCell(2).innerHTML = `R$ ${parseFloat(produto.valor).toFixed(2).replace('.', ',')}`
         });
 
         //altera o display de none para block
@@ -86,5 +86,6 @@ function Cadastrar(){
     }
     
 }
+
 
 
