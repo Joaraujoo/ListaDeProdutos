@@ -56,7 +56,8 @@ function Cadastrar(){
         produtos.forEach(produto => {
             let linha = listaProdutos.insertRow();
             linha.insertCell(0).innerHTML = produto.nome;
-            linha.insertCell(1).innerHTML = `R$ ${produto.valor}`;
+            linha.insertCell(1).innerHTML = produto.descricao;
+            linha.insertCell(2).innerHTML = `R$ ${produto.valor}`;
         });
 
         //altera o display de none para block
@@ -67,17 +68,23 @@ function Cadastrar(){
         nome.value = ''
         descricao.value = ''
         valor.value = ''
+
+        let mensagemErro = document.getElementById("mensagemErro");
+
+        mensagemErro.innerHTML = '';
+        mensagemErro.className = "";
+
         
     } else {
 
         //mensagem de erro no cadastro
-       let listagem = document.getElementById('listagem')
+        let mensagemErro = document.getElementById("mensagemErro");
 
-       listagem.innerHTML = 'Erro ao cadastrar, verifique os dados!'
-       
-       listagem.className = "alert alert-danger"
+        mensagemErro.innerHTML = 'Erro ao cadastrar, verifique os dados!';
+        mensagemErro.className = "alert alert-danger";
         
     }
     
 }
+
 
